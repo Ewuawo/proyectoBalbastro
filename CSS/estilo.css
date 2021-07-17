@@ -1,0 +1,351 @@
+@charset "UTF-8";
+.footer__item--btn {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #f57b51;
+  border-radius: 0.6em;
+  color: #f57b51;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin: 20px;
+  padding: 5px 20px; }
+
+.footer__item--boton {
+  border-color: #f57b51;
+  box-shadow: 0 0 40px 40px #d1cebd inset, 0 0 0 0 #f57b51;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out; }
+
+.footer__item--boton:hover {
+  box-shadow: 0 0 10px 0 #f57b51 inset, 0 0 10px 4px #f57b51; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+img {
+  width: 100%;
+  height: 100%; }
+
+body {
+  font-family: "roboto",sans-serif;
+  background-color: #f6eedf; }
+
+li {
+  height: 20%;
+  color: black;
+  font-size: 1.4rem;
+  text-align: center; }
+
+.fotos {
+  width: 80%;
+  height: 80%; }
+
+h1 {
+  animation-duration: 2s;
+  animation-name: aparecer;
+  padding: 1rem; }
+
+h2 {
+  color: #d63447; }
+
+h3 {
+  color: #d63447; }
+
+h5 {
+  background-color: #d63447;
+  text-transform: uppercase; }
+
+@keyframes aparecer {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/*Estilo de Servicio*/
+.gridServicio {
+  display: grid;
+  height: 90%;
+  width: 90%;
+  margin: 20px auto;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr; }
+
+.formatoTarjeta, .recomendaciones, .metodoPago {
+  background-color: #d1cebd;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
+  font-size: 1rem;
+  height: 100%; }
+
+/*Uso de la funcion Extend*/
+.metodoPago img {
+  border-radius: 20px; }
+
+.servicios {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  height: 50%; }
+
+.servicios div {
+  background-color: #d1cebd;
+  border-radius: 10px;
+  padding: 3%; }
+
+ol li {
+  text-align: left;
+  padding-top: 6%; }
+
+.logoAnimado {
+  animation: logoAnimado 2s linear 1; }
+
+@keyframes logoAnimado {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/*Funcion Mixin para formatear textos*/
+.main__section--formularioContacto {
+  padding: 2%;
+  letter-spacing: 1.5px; }
+
+.main__div--textoNosotros {
+  text-align: justify;
+  padding: 5px;
+  margin: 1%;
+  line-height: 3rem;
+  letter-spacing: 1.5px;
+  box-shadow: 2px 2px 2px 2px rgba(184, 140, 20, 0.2); }
+
+.main__div--fotoCamioneta img {
+  border-radius: 20px; }
+
+.main__mapa {
+  width: 50%;
+  height: 50%;
+  padding-top: 50px; }
+
+.main__mapa:hover {
+  transform: scale(1.2, 1.2); }
+
+.main__table {
+  background-color: #d1cebd;
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 2px 2px 2px 2px rgba(184, 140, 20, 0.2); }
+  .main__table tr:nth-child(even) {
+    background-color: #f6eedf; }
+
+.main__lista--horarios {
+  list-style-type: none;
+  border-radius: 10px;
+  background-color: #d1cebd;
+  padding: 20px;
+  box-shadow: 2px 2px 2px 2px rgba(184, 140, 20, 0.2); }
+  .main__lista--horarios li:nth-child(even) {
+    background-color: #f6eedf; }
+  .main__lista--horarios li {
+    width: 100%;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 1rem;
+    white-space: pre;
+    line-height: 1rem;
+    letter-spacing: 0.1rem; }
+
+.main__parrafo--estiloTexCentrado {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  letter-spacing: 2px; }
+
+.main__parrafo--DobleColumna {
+  grid-column: span 2; }
+
+.footer {
+  background-image: linear-gradient(to top, #d1cebd, #f6eedf);
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900; }
+  .footer i {
+    color: #d63447;
+    font-size: 3rem; }
+  .footer__lista {
+    list-style-type: none;
+    display: flex;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center; }
+  .footer__item {
+    height: 65%; }
+
+/*resposivo*/
+/*dispositivos pequeños*/
+@media only screen and (max-width: 600px) {
+  .body {
+    display: grid;
+    height: 1000px;
+    grid-template-columns: 100%;
+    grid-template-rows: 200px auto 100px;
+    grid-template-areas: "logo" "contenido" "footer"; }
+  header {
+    grid-area: logo; }
+  main {
+    grid-area: contenido; }
+  footer {
+    grid-area: footer; }
+  ul {
+    flex-direction: row; }
+  .fotoCamioneta {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 100%; }
+  .servicios {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-template-columns: 100%;
+    height: auto; }
+  .metodoPago {
+    font-size: 1rem;
+    height: auto; }
+  .gridServicio {
+    display: grid;
+    height: 95%;
+    width: 90%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1fr 1fr; }
+  .main__table--localidades {
+    width: 90%;
+    margin: 4%; }
+  .main__lista--horarios {
+    padding: 0px; }
+  .footer__item {
+    height: 60%; }
+  .footer__lista {
+    width: 90%; } }
+
+/*dispositivos medianos*/
+@media only screen and (min-width: 600px) {
+  .body {
+    display: grid;
+    height: 1000px;
+    grid-template-columns: 100%;
+    grid-template-rows: 200px auto 110px;
+    grid-template-areas: "logo" "contenido" "footer"; }
+  header {
+    grid-area: logo; }
+  main {
+    grid-area: contenido; }
+  footer {
+    grid-area: footer; }
+  ul {
+    flex-direction: row; }
+  #carouselExampleCaptions {
+    padding: 0%;
+    margin: 0%; }
+  .main__section--formularioContacto {
+    padding-bottom: 70px; }
+  .main__h2 {
+    padding-left: 2%; }
+  .main__table--localidades {
+    width: 80%;
+    margin: 10%; }
+  .main__mapa {
+    padding-left: 75px; }
+  .main__div--fotoCamioneta {
+    padding: 30px; }
+  .main__div--textoNosotros {
+    padding: 20px; }
+  .gridServicio {
+    display: grid;
+    height: 90%;
+    width: 90%;
+    margin: 20px auto;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr; }
+  .gridServicio .recomendaciones {
+    grid-column: span 2; }
+  .footer {
+    height: 100%;
+    padding-bottom: 15px; } }
+
+/*dispositivos grandes*/
+@media only screen and (min-width: 1200px) {
+  .body {
+    display: grid;
+    height: 1500px;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px auto 100px;
+    grid-template-areas: "logo" "contenido" "footer";
+    grid-gap: 10px; }
+  header {
+    grid-area: logo; }
+  main {
+    grid-area: contenido; }
+  footer {
+    grid-area: footer; }
+  ul {
+    flex-direction: row; }
+  .servicios div {
+    font-size: xx-large; }
+  .gridServicio .recomendaciones {
+    grid-column: span 2; }
+  .header img {
+    height: 85%;
+    width: 85%; }
+  h2 {
+    padding-left: 10px; }
+  .metodoPago {
+    font-size: 2rem;
+    height: auto; }
+  .main__section {
+    width: 100%; }
+    .main__section--nosotrosGrid {
+      display: grid;
+      grid-template-columns: 60% 40%; }
+  .main__table {
+    height: 100%;
+    width: 88%; }
+  .main__filas {
+    text-align: center; }
+  .main__mapa:hover {
+    transform: scale(1.2, 1.2); }
+  .main__mapa {
+    width: 55%;
+    height: 55%;
+    padding-left: 80px;
+    padding-right: 50px; }
+  .main--gridIndex {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 2fr 1fr;
+    grid-gap: 10px; }
+  .main__div--mapaYTabla {
+    display: flex;
+    width: 100%;
+    padding-bottom: 100px; }
+  .main__div--DobleColumna {
+    grid-column: span 2; }
+  .main__div--gMapa {
+    padding: 5%; }
+  .main__div--fotoCamioneta {
+    height: 80%;
+    width: 100%;
+    padding-top: 11%; }
+  .main__lista--horarios {
+    margin-right: 30px; } }
