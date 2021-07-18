@@ -310,7 +310,7 @@ ol{
             }
         }
         &__h2{
-            padding-left: 2%;
+            padding-left: 1%;
         }
         &__table{
             &--localidades{
@@ -353,6 +353,7 @@ ol{
     
 
 }
+
 /*dispositivos grandes*/
 @media only screen and (min-width:1200px){
     .body{
@@ -389,10 +390,6 @@ ol{
             height: 85%;
             width: 85%;
         }
-    }
-    
-    h2{
-        padding-left: 10px;
     }
     .metodoPago{
         font-size: 2rem;

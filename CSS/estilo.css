@@ -260,7 +260,7 @@ ol li {
   .main__section--formularioContacto {
     padding-bottom: 70px; }
   .main__h2 {
-    padding-left: 2%; }
+    padding-left: 1%; }
   .main__table--localidades {
     width: 80%;
     margin: 10%; }
@@ -308,8 +308,6 @@ ol li {
   .header img {
     height: 85%;
     width: 85%; }
-  h2 {
-    padding-left: 10px; }
   .metodoPago {
     font-size: 2rem;
     height: auto; }
