@@ -11,12 +11,13 @@ img{
 body{
     font-family: "roboto",sans-serif;
     background-color: $colorGrisClaro;
+    font-size: 16px;
 } 
 
 li{
     height: 20%; 
     color: rgb(0, 0, 0);
-    font-size: 1.4rem; 
+    font-size: 1.4em; 
     text-align: center;
 }
 .fotos{
@@ -134,7 +135,20 @@ ol{
         &--fotoCamioneta{
             img{border-radius: 20px;
         }
-    }
+        }
+        &--gMapa{
+            position: relative;
+        padding-bottom: 65%;
+        height: 0;
+        overflow: hidden;
+            iframe{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }               
+        }
     }
     &__mapa{
         width: 50%; 
@@ -167,7 +181,7 @@ ol{
             li{
                 width: 100%;
                 padding-top: 20px; 
-                @include formatoTex(center, 1rem, pre, 1rem, 0.1rem)
+                @include formatoTex(center, 0.9em, pre, 1em, 0.1em)
                               
             }   
         }
@@ -175,9 +189,9 @@ ol{
     &__parrafo{
         &--estiloTexCentrado{
             text-align: center;
-            font-size: 1.5rem;
-            line-height: 2rem;
-            letter-spacing: 2px;
+            font-size: 1.5em;
+            line-height: 1.5em;
+            letter-spacing: 0.125em;
         }
         &--DobleColumna{
             grid-column: span 2;            
@@ -187,31 +201,35 @@ ol{
 .footer{
     background-image: linear-gradient(to top, $colorGris ,$colorGrisClaro);
     font-family: "Font Awesome 5 Free"; 
-    font-weight: 900;
+    
     i {
         color: $colorPrincipal;
-        font-size: 3rem;
+        font-size: 2em;
     }
     &__lista{
         list-style-type: none; 
         display: flex; 
-        height: 100%; 
+        height: 100%;
+        width: 100%; 
         justify-content: space-evenly;
         align-items: center;
     }
     &__item{
-        height: 65%;
+        height: 70%;
+        
     }    
 }
 /*resposivo*/   
 /*dispositivos pequeños*/
-@media only screen and (max-width:600px){
+@media (max-width:600px){
     .body{
     display: grid;     
-    height: 1000px;
+    height: 70em;
     grid-template-columns: 100%;
-    grid-template-rows: 200px auto 100px;
-    grid-template-areas: "logo" "contenido" "footer";
+    grid-template-rows: 10em auto 7em;
+    grid-template-areas: "logo" 
+                         "contenido" 
+                         "footer";
     }
     header{
         grid-area: logo;
@@ -261,18 +279,38 @@ ol{
             }
         }
         &__lista{
+           
+            
             &--horarios{
                 padding: 0px;
+               
+            
+            width: 100%;
+
             }
+        }
+       
+        &__div{
+            &--contenedorHorario{
+                padding: 1%;
+            }
+           
         }
         }
     .footer{
         &__item{
-            height: 60%;
-            
+            &--btn{
+                margin: 0;
+                padding:none;
+                border: none;
+            }
+            &--boton {
+                box-shadow: none;
+            }
         }  
         &__lista{
             width: 90%;
+            
         }  
     }
     
@@ -281,9 +319,9 @@ ol{
 @media only screen and (min-width:600px){
     .body{
     display: grid;     
-    height: 1000px;
+    height: 62.5em;
     grid-template-columns: 100%;
-    grid-template-rows: 200px auto 110px;
+    grid-template-rows: 10em auto 6.875em;
     grid-template-areas: "logo" "contenido" "footer";
     }
     header{
@@ -322,6 +360,7 @@ ol{
             padding-left: 75px;
         }
         &__div{
+            
             &--fotoCamioneta{
                 padding: 30px;
             }
@@ -435,10 +474,8 @@ ol{
             }
             &--DobleColumna{
                 grid-column: span 2;            
-            }
-            &--gMapa{
-                padding: 5%;
-            }
+            }           
+            
             &--fotoCamioneta{
                 height: 80%;
                 width: 100%;
